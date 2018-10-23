@@ -1,20 +1,9 @@
-/*if (confirm("Hey le site xxxvidsxxx est trop bien. Viens dessus stp please")) {
-  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-}*/
-// Ajout du popup
-confirmation = () => {
-  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-};
-removeDiv = () => {
-  document.getElementById("popup").remove();
-};
-setTimeout(function() {
-  document.getElementById("popup").remove();
-}, 10000);
-document.getElementById("popup").innerHTML =
-  `<h3>Hey le site xxxvidsxxx est trop bien. Viens dessus stp please</h3>` +
-  `<button class="button"onclick= confirmation()>Aller vers ce site</button> <button class="button" onclick=removeDiv()>Rester sur ce site</button>`;
-
+//popup
+setInterval( function (){
+if (confirm("Hey le site xxxvidsxxx est trop bien. Viens dessus stp please")) {
+  window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_blank');
+}
+} , 10000)
 // changement du style par le boutton Mode
 document.getElementById("modeButton").addEventListener("click", function() {
   document.querySelector("html").style.backgroundColor = "magenta";
